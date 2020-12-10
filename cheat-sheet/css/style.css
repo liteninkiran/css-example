@@ -1,13 +1,171 @@
+/*
+    NOTES:
+
+    > Applies styling to all elements
+
+      * {}
+
+
+    > Condense 4 properties into one:
+
+      border-right: 5px red solid;
+      border-left: 5px red solid;
+      border-top: 5px red solid;
+      border-bottom: 5px red solid;
+
+      Goes to:
+
+      border: 5px red solid;
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+
+      Goes to:
+
+      font: normal 16px Arial, Helvetica, sans-serif;
+
+
+    > Precedence... These get over-ridden by the "border" style underneath
+
+      border-width: 3px;
+      border-bottom-width: 10px;
+      border-top-style: dotted;
+
+      border: 5px red solid;
+
+
+    > Targetting elements within a class
+
+      h1 {}                 Targets ALL h1
+      .class-name h1 {}     Targets h1 within the class "class-name"
+
+
+    > Targetting classes within a class
+
+      .form-group           Targets ALL classes called "form-group"
+      .my-form .form-group  Targets classes called "form-group" within the "my-form" class
+
+
+    > Targetting subsets of elements:
+
+      input {}                  Targets all <input> elements
+      input[type="text"] {}     Targets <input> elements of type "text"
+
+*/
+
 
     body
     {
         background-color: #f4f4f4;
         color: #555555;
-/*
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        font-weight: normal;
-*/
         font: normal 16px Arial, Helvetica, sans-serif;
+
+        line-height: 1.6em;
+        margin: 0;
     }
+
+    a
+    {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover
+    {
+        color: red;
+    }
+
+    a:active
+    {
+        color: green;
+    }
+
+    a:visited
+    {
+        color: black;
+    }
+
+    .container
+    {
+        width: 80%;
+        margin: auto;
+    }
+
+    .box-1
+    {
+        background-color: #333333;
+        color: #ffffff;
+        border: 5px red solid;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .box-1 h1
+    {
+        font-family: Tahoma;
+        font-weight: 800px;
+        font-style: italic;
+        text-decoration: underline;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        word-spacing: 1em;
+    }
+
+    .box-2
+    {
+        border: 3px dotted #cccccc;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .categories
+    {
+        border: 1px solid #cccccc;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .categories h2
+    {
+        text-align: center;
+    }
+
+    .categories ul
+    {
+        padding: 0;
+        padding-left: 20px;
+        list-style: square;
+        list-style: none;
+    }
+
+    .categories li
+    {
+        padding-bottom: 6px;
+        border-bottom: dotted 1px #333333;
+        list-style-image: url('../images/checkmark-20.png');
+    }
+
+    .my-form
+    {
+        padding: 20px;
+    }
+
+    .my-form .form-group
+    {
+        padding-bottom: 15px;
+    }
+
+    .my-form label
+    {
+        display: block;
+    }
+
+    .my-form input[type="text"], textarea
+    {
+        padding: 8px;
+        width: 100%;
+    }
+
+
 
