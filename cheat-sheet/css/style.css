@@ -26,7 +26,7 @@
       font: normal 16px Arial, Helvetica, sans-serif;
 
 
-    > Precedence... These get over-ridden by the "border" style underneath
+    > Precedence... The first 3 settings get over-ridden by the fourth
 
       border-width: 3px;
       border-bottom-width: 10px;
@@ -52,6 +52,14 @@
       input {}                  Targets all <input> elements
       input[type="text"] {}     Targets <input> elements of type "text"
 
+
+    > Clearing floats
+
+      None:     the element is not moved down to clear past floats.
+      Left:     the element is moved down to clear past left floats.
+      Right:    the element is moved down to clear past right floats.
+      Both:     the element is moved down to clear past both left and right floats.    
+
 */
 
 
@@ -71,11 +79,6 @@
         color: black;
     }
 
-    a:hover
-    {
-        color: red;
-    }
-
     a:active
     {
         color: green;
@@ -83,7 +86,17 @@
 
     a:visited
     {
-        color: black;
+        /*color: purple;*/
+    }
+
+    a:hover
+    {
+        color: red;
+    }
+
+    .clr
+    {
+        clear: both;
     }
 
     .container
@@ -167,5 +180,98 @@
         width: 100%;
     }
 
+    .button
+    {
+        background-color: #333333;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+    }
+
+    .button-hover
+    {
+        background: red;
+        color: white;
+    }
+
+    .block
+    {
+        float: left;
+        width: 20%;
+        border: 1px solid #cccccc;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #main-block
+    {
+        float: left;
+        width: 70%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    #sidebar
+    {
+        float: right;
+        width: 30%;
+        background-color: #333333;
+        color: white;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .p-box
+    {
+        width: 800px;
+        height: 500px;
+        border: 1px solid black;
+        margin-top: 30px;
+        position: relative;
+        background-image: url('../images/bgimage.jpg');
+        background-position: 100px 200px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .p-box h1
+    {
+        position: absolute;
+        top: 100px;
+        left: 200px;
+    }
+
+    .p-box h2
+    {
+        position: absolute;
+        bottom: 40px;
+        right: 100px;
+    }
+
+    .fix-me
+    {
+        position: fixed;
+        top: 400px;
+    }
+
+    .my-list li:first-child
+    {
+        background: red;
+    }
+
+    .my-list li:last-child
+    {
+        background: blue;
+    }
+
+    .my-list li:nth-child(6)
+    {
+        background: yellow;
+    }
+
+    .my-list li:nth-child(even)
+    {
+        background: grey;
+    }
 
 
